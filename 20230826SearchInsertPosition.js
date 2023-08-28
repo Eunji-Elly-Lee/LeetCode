@@ -8,20 +8,30 @@
  * @return {number}
  */
 var searchInsert = function (nums, target) {
-  let min = 0;
-  let max = nums.length - 1;
+  // The loop divides the search range in half with each iteration, based on the middle element.
+  // This approach results in a time complexity of O(log n).
 
-  while (min <= max) {
-    let mid = Math.floor((min + max) / 2);
+  // Get the start index and the end index of the array
+  let start = 0;
+  let end = nums.length - 1;
 
-    if (nums[mid] === target) {
-      return mid;
-    } else if (nums[mid] < target) {
-      min = mid + 1;
+  while (start <= end) {
+    // Calculate the middle index from the start and end indices
+    let middle = Math.floor((start + end) / 2);
+
+    if (nums[middle] === target) {
+      // If the middle element is equal to the target, return the middle index
+      return middle;
+    } else if (nums[middle] < target) {
+      // If the middle element is less than the target, update the start pointer to the middle + 1
+      start = middle + 1;
     } else {
-      max = mid - 1;
+      // If the middle element is greater than the target, update the end pointer to the middle - 1
+      end = middle - 1;
     }
   }
 
-  return min;
+  // If the target is not found, return the start index
+  // where the target would be inserted in the sorted order
+  return start;
 };

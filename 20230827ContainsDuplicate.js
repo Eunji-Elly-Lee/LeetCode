@@ -5,28 +5,16 @@
  * @return {boolean}
  */
 var containsDuplicate = function (nums) {
-//   if (nums.length === 1) {
-//     return false;
-//   } else {
-//     let hasDuplicatedElement = false;
-//     let index = 1;
-
-//     while (!hasDuplicatedElement && index <= nums.length - 1) {
-//       for (tempIndex = 0; tempIndex < index; tempIndex++) {
-//         if (nums[tempIndex] === nums[index]) {
-//           hasDuplicatedElement = true;
-
-//           break;
-//         }
-//       }
-
-//       index++;
-//     }
-
-//     return hasDuplicatedElement;
-//   }
-
+  // Create a new Set from the array to remove duplicate elements
+  // A JavaScript Set is a collection of unique values
   const newSet = new Set(nums);
 
+  // If the size of the set is different from the length of the array, return true
+  // Otherwise return false
   return newSet.size !== nums.length;
 };
+
+// The time complexity of this function is O(n), where n is the length of the input array nums.
+// This is because creating a new Set from the array takes O(n) time,
+// and comparing the size of the set to the length of the array also takes O(n) time.
+// Therefore, the overall time complexity is O(n).
