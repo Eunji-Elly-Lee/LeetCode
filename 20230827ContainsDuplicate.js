@@ -15,6 +15,6 @@ var containsDuplicate = function (nums) {
 };
 
 // The time complexity of this function is O(n), where n is the length of the input array nums.
-// This is because creating a new Set from the array takes O(n) time,
-// and comparing the size of the set to the length of the array also takes O(n) time.
-// Therefore, the overall time complexity is O(n).
+// This is because creating a new Set from the array takes O(n) time, and comparing the size of the set to the length of the array also takes O(n) time.
+// The space complexity is O(n) as well. This is because the newSet variable stores a set containing all the unique elements from the input array nums.
+// In the worst case scenario, where all elements in nums are unique, the set will have a size of n, requiring O(n) space.

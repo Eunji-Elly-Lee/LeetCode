@@ -42,6 +42,9 @@ var isAnagram = function (s, t) {
   return true;
 };
 
-// The time complexity of this function is O(n), where n is the length of the input strings s and t.
-// This is because the function iterates through both strings once to build the characterCounter object
-// and then iterates through the second string to check if each character exists in the characterCounter object.
+// The time complexity of this code is O(n), where n is the length of the input string.
+// This is because we iterate through each character in both strings once.
+// The space complexity is O(k), where k is the number of unique characters in the input string.
+// This is because we use a characterCounter object to keep track of the count of each character.
+// In the worst case scenario, where all characters in the input string are unique, the space complexity would be O(n).
+// However, if the input string has a limited set of characters, the space complexity would be less than O(n).

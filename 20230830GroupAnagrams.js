@@ -36,6 +36,12 @@ var groupAnagrams = function (strs) {
 
 // The time complexity of this code is O(n * m * log(m)),
 // where n is the length of the input array strs and m is the average length of the strings in strs.
-// This is because for each string in strs,
-// we split it into an array of characters, sort the characters (which takes O(m * log(m)) time), and then join them back into a string.
-// This process is repeated for each string in strs, resulting in a time complexity of O(n * m * log(m)).
+// This is because for each string in strs, we are splitting it into an array of characters, sorting the array, and then joining it back into a string.
+// The sorting operation has a time complexity of O(m * log(m)).
+// Since we are doing this for each string in strs, the overall time complexity is O(n * m * log(m)).
+// The space complexity of this code is O(n * m), where n is the length of the input array strs and m is the average length of the strings in strs.
+// This is because we are creating a new object, anagramGroups, to store the anagram groups.
+// The number of keys in this object will be equal to the number of unique sorted strings, which can be at most n.
+// Each key in the object will have an array of strings as its value,
+// and the total number of strings in all the arrays will be equal to the total number of strings in strs, which can be at most n * m.
+// Therefore, the overall space complexity is O(n * m).

@@ -35,3 +35,8 @@ var searchInsert = function (nums, target) {
   // where the target would be inserted in the sorted order
   return start;
 };
+
+// The time complexity of this code is O(log n) because it uses binary search to find the target element in a sorted array.
+// In each iteration of the while loop, the search space is halved, so the algorithm has a logarithmic time complexity.
+// The space complexity of this code is O(1) because it only uses a constant amount of additional space to store the variables start, end, and middle.
+// The space used does not depend on the size of the input array.

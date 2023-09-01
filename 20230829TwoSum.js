@@ -35,10 +35,18 @@ var twoSum = function (nums, target) {
 };
 
 // The time complexity of this code is O(n), where n is the length of the input array nums.
-// This is because the code iterates through the nums array once in the for loop.
+// This is because the code iterates through the nums array once in the for loop, performing constant time operations for each element.
+// The space complexity of this code is O(n), where n is the length of the input array nums.
+// This is because the code creates a valueObject object to store the values and their corresponding indices.
+// In the worst case scenario, where all elements in nums are unique, the valueObject object will store n key-value pairs.
 
-// The time complexity of my initial function is O(n log n) because it uses a binary search algorithm within a loop.
-// The outer loop iterates through each element in the nums array, resulting in a time complexity of O(n).
+// The time complexity of my initial code is O(nlogn) because there is a loop that iterates through each element in the nums array,
+// and within that loop, there is a binary search operation that has a time complexity of O(logn).
+// Therefore, the overall time complexity is O(nlogn).
+// The space complexity of my initial code is O(1)
+// because it only uses a constant amount of additional space to store variables like index, value, start, end, and middle.
+// The space used does not depend on the size of the input array.
+
 // if (nums.length === 2) {
 //   return [0, 1];
 // }

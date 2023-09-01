@@ -34,3 +34,8 @@ var search = function (nums, target) {
   // If the target is not found, return -1
   return -1;
 };
+
+// The time complexity of this code is O(log n) because it uses binary search to find the target element in a sorted array.
+// In each iteration of the while loop, the search space is divided in half, resulting in a logarithmic time complexity.
+// The space complexity of this code is O(1) because it only uses a constant amount of extra space to store the variables start, end, and middle.
+// The space used does not depend on the size of the input array.
