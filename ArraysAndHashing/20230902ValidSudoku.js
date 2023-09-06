@@ -60,3 +60,10 @@ var isValidSudoku = function (board) {
 
   return true;
 };
+
+// The time complexity of this code is O(n^2), where n is the size of the Sudoku board.
+// This is because there are two nested loops,
+// one iterating over the rows and the other iterating over the columns, resulting in a total of n^2 iterations.
+// The space complexity of this code is O(n), where n is the size of the Sudoku board.
+// This is because three sets (rowSet, columnSet, and subBoxSet) are created for each row, and the maximum number of elements in each set is n.
+// Therefore, the space complexity is linear with respect to the size of the board.
