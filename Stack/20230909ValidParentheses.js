@@ -37,6 +37,8 @@ var isValid = function (s) {
         // If the character is a closing bracket, compare it with the last bracket on the stack,
         // and remove it from the stack if they match
         stackArray.pop();
+      } else {
+        stackArray.push(s.charAt(index));
       }
     }
   }
@@ -46,7 +48,7 @@ var isValid = function (s) {
 };
 
 // The time complexity of this code is O(n), where n is the length of the input string s.
-// This is because the code iterates through the string once in the for loop, performing constant time operations for each character.
+// This is because the code iterates through each character of the string once in the for loop.
 // The space complexity of this code is O(n), where n is the length of the input string s.
-// This is because the code uses a stack (implemented as an array) to store opening brackets.
+// This is because the code uses a stack (implemented as an array) to store opening brackets encountered in the string.
 // In the worst case scenario, where all characters in the string are opening brackets, the stack will have a length of n.
