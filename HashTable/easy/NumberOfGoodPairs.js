@@ -14,7 +14,7 @@ var numIdenticalPairs = function (nums) {
   // Iterate through the array using a for...of loop
   for (const number of nums) {
     // If a number is in the frequency object, add the frequency value to the counter,
-    // and then increase the frequency
+    // and then increase its frequency
     // If it's not in the object, add the number with a value of 1
     if (numberFrequency[number]) {
       counter += numberFrequency[number];
@@ -24,7 +24,7 @@ var numIdenticalPairs = function (nums) {
     }
   }
 
-  // Retrun the counter
+  // Return the counter
   return counter;
 };
 
