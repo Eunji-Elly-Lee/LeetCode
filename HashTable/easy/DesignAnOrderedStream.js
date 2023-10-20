@@ -52,3 +52,9 @@ OrderedStream.prototype.insert = function (idKey, value) {
  * var obj = new OrderedStream(n)
  * var param_1 = obj.insert(idKey,value)
  */
+
+// The time complexity of the insert function is O(n), where n is the number of elements in the `stream` object.
+// This is because in the worst case scenario, we would have to iterate through all the elements in the `stream` to find the next available chunk.
+
+// The space complexity of the insert function is O(1), as we are only storing the chunks temporarily in an array `chunks`
+// and not creating any additional data structures that grow with the input size.
