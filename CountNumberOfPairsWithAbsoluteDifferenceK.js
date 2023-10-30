@@ -37,3 +37,9 @@ var countKDifference = function (nums, k) {
   // Return the counter
   return counter;
 };
+
+// The time complexity of this code is O(n), where n is the length of the input array `nums`.
+// This is because the code iterates through each element in the array once.
+// The space complexity of this code is O(n), where n is the number of unique elements in the input array `nums`.
+// This is because the code uses an object `numberFrequency` to store the frequency of each number.
+// The space required by this object depends on the number of unique elements in the array.
