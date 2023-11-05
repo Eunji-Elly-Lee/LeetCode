@@ -13,6 +13,39 @@
  * @param {number} k
  * @return {number[]}
  */
-var findingUsersActiveMinutes = function(logs, k) {
-    
+var findingUsersActiveMinutes = function (logs, k) {
+  // Create a map to store users' actions by their ID
+  const logMap = new Map();
+
+  // Iterate through the log array using a for...of loop
+  for (const log of logs) {
+    // If the ID isn't in the log map, add the ID with an empty new set as its value
+    if (!logMap.has(log[0])) {
+      logMap.set(log[0], new Set());
+    }
+
+    // Add the action time to the set of the ID
+    logMap.get(log[0]).add(log[1]);
+  }
+
+  // Create an array to store UAMs, and fill all elements as 0 which is a defult value
+  const UAMs = new Array(k).fill(0);
+
+  // Iterate through the values of the log map using a for...of loop
+  // The values represent the actions of each user ID
+  for (const actions of logMap.values()) {
+    // Increase the value of the array corresponding to the size of actions
+    UAMs[actions.size - 1]++;
+  }
+
+  // Return the UAM array
+  return UAMs;
 };
+
+// The time complexity of this solution is O(n), where n is the length of the input array `logs`.
+// This is because we iterate through each log once to create the `logMap`,
+// and then iterate through each set of actions in the `logMap` to update the UAMs array.
+// The space complexity of this solution is O(n), where n is the maximum number of actions per user.
+// This is because we create an array `UAMs` of size n to store the UAMs.
+// Additionally, we create a map `logMap` to store the actions for each user, which can have a maximum size of the number of logs.
+// However, since n is typically much smaller than the number of logs, the space complexity can be considered O(n).
