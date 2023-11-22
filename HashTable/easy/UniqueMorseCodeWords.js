@@ -2,6 +2,9 @@
 // 'a' maps to ".-",
 // 'b' maps to "-...",
 // 'c' maps to "-.-.", and so on.
+// https://leetcode.com/problems/unique-morse-code-words/
+// Array / Hash Table / String
+
 // For convenience, the full table for the 26 letters of the English alphabet is given below:
 // [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.",
 //  "---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]

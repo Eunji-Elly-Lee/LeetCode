@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/design-an-ordered-stream/
+// Array / Hash Table / Design / Data Stream
+
 // There is a stream of n (idKey, value) pairs arriving in an arbitrary order, where idKey is an integer between 1 and n and value is a string.
 // No two pairs have the same id.
 // Design a stream that returns the values in increasing order of their IDs by returning a chunk (list) of values after each insertion.

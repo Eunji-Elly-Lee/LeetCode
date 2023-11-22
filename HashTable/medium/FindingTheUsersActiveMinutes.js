@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/finding-the-users-active-minutes/
+// Array / Hash Table
+
 // You are given the logs for users' actions on LeetCode, and an integer k.
 // The logs are represented by a 2D integer array logs
 // where each logs[i] = [ID i, time i] indicates that the user with IDi performed an action at the minute time i.

@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
+// Array / Hash Table / Counting
+
 // Given an integer array nums and an integer k, return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
 // The value of |x| is defined as:
 // x if x >= 0.

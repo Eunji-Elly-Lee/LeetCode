@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/
+// Array / Hash Table
+
 // You are given an integer array nums.
 // You need to create a 2D array from nums satisfying the following conditions:
 // The 2D array should contain only the elements of the array nums.

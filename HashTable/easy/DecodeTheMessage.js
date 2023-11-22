@@ -2,6 +2,9 @@
 // The steps to decode message are as follows:
 // Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table.
 // Align the substitution table with the regular English alphabet.
+// https://leetcode.com/problems/decode-the-message/
+// Hash Table / String
+
 // Each letter in message is then substituted using the table.
 // Spaces ' ' are transformed to themselves.
 // For example, given key = "happy boy" (actual key would have at least one instance of each letter in the alphabet),

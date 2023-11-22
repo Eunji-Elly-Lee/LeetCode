@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/rotate-array/
+// Array / Math / Two Pointers
+
 // Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 // Follow up:
 // Try to come up with as many solutions as you can.
