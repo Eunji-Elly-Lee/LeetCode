@@ -30,3 +30,8 @@ var maxProfit = function (prices) {
   // Return the maximum profit
   return maximumProfit;
 };
+
+// The time complexity of this code is O(n), where n is the length of the `prices` array.
+// This is because the code iterates through the prices array once in the for loop.
+// The space complexity of this code is O(1),
+// as it only uses a constant amount of additional space to store the `minimumPrice` and `maximumProfit` variables.
