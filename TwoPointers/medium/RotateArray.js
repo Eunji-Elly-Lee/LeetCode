@@ -57,6 +57,8 @@ var rotate = function (nums, k) {
 // The space complexity of my initial code is O(1) because it only uses a constant amount of additional space.
 // The variables counter, temp, index, and number are all individual variables that do not depend on the size of the input array.
 
+// Used Brute Force algorithm
+
 // var rotate = function (nums, k) {
 //   let counter = 0;
 
