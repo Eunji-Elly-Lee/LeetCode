@@ -16,10 +16,17 @@ var maximumStrongPairXor = function (nums) {
   // Create and initialize the maximum XOR value for strong pairs to 0
   let maximumXOR = 0;
 
-  // Iterate through the input array using a for...of loop for the first number of a pair
-  for (const firstNumber of nums) {
-    // Iterate through the input array using a for...of loop for the second number of a pair
-    for (const secondNumber of nums) {
+  // Iterate through the input array using a for loop for the first number of a pair
+  for (let firstIndex = 0; firstIndex < nums.length; firstIndex++) {
+    // Iterate through the input array using a for loop for the second number of a pair
+    for (
+      let secondIndex = firstIndex;
+      secondIndex < nums.length;
+      secondIndex++
+    ) {
+      const firstNumber = nums[firstIndex];
+      const secondNumber = nums[secondIndex];
+
       // If the current numbers of the pair are different and satisfy the given condition
       // update the maximum XOR value as a higher value
       // If the current numbers of the pair are same, skip the calculation since the XOR value would be 0
