@@ -48,3 +48,22 @@ var summaryRanges = function (nums) {
 // The space complexity of this code is also O(n).
 // This is because the function creates a new array `listOfRanges` to store the results,
 // and the size of the new array is proportional to the length of the input array.
+
+// The second try: using nested loops
+// -> The first code may be slightly more readable and easier to understand
+
+// const listOfRanges = [];
+
+// for (let index = 0; index < nums.length; index++) {
+//   let start = nums[index];
+
+//   while (index + 1 < nums.length && nums[index] + 1 === nums[index + 1]) {
+//     index++;
+//   }
+
+//   let end = nums[index];
+
+//   listOfRanges.push(start === end ? `${start}` : `${start}->${end}`);
+// }
+
+// return listOfRanges;
