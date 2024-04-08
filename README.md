@@ -2,16 +2,21 @@
 
 ![logo](https://theme.zdassets.com/theme_assets/9008406/036323c6afd10392aa5b7e3a2eb7557d17955c81.png)
 
-This repository is where I use my main language, JavaScript, to store the solutions to LeetCode.
-This repository is where I use my main language, JavaScript, to store the solutions to LeetCode.
-
 #### [Go to LeetCode](https://leetcode.com//)
 
-You can find each problem in a solved algorithm and a folder divided by difficulty level.
+This repository serves as a playground for me to sharpen my coding skills by tackling algorithmic challenges on LeetCode. Here, you'll find my solutions crafted primarily in JavaScript, meticulously categorized by algorithm type and difficulty level.
 
-### Code Samples
+### Why LeetCode?
 
-Here is an example of how I approached solving a problem:
+LeetCode offers a fantastic platform to push my coding abilities to the limit. By tackling an array of problems, I actively engage in the following:
+
+- **Solidifying Data Structures & Algorithms**: Deepen understanding and practical application of core data structures and algorithms
+- **Enhancing Problem-Solving Approach**: Develop a structured and efficient approach to problem-solving, fostering critical thinking skills
+- **Boosting Time & Space Complexity Awareness**: Optimize solutions by analyzing time and space complexity, ensuring efficient resource utilization
+
+### Code Sample & Explanation:
+
+To illustrate my approach, here's a sample solution for the "Remove Element" problem along with a detailed explanation:
 
 ```
 /**
@@ -42,3 +47,9 @@ var removeElement = function (nums, val) {
 // The space complexity of this code is O(1) because it uses a constant amount of extra space.
 // The variable `k` is used to keep track of the new length of the array, but it does not depend on the size of the input array.
 ```
+
+### Beyond the Code:
+
+This repository isn't just a collection of solutions; it represents my dedication to continuous learning and improvement. By actively engaging with LeetCode challenges, I strive to become a more well-rounded and efficient developer.
+
+**I welcome any feedback or suggestions you might have!**
