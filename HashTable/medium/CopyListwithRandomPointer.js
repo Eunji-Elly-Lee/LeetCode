@@ -31,6 +31,53 @@
  * @param {Node} head
  * @return {Node}
  */
-var copyRandomList = function(head) {
-    
+var copyRandomList = function (head) {
+  // If the head node is null, return null
+  if (!head) {
+    return null;
+  }
+
+  // Create a new map to store the original nodes and copied nodes
+  const map = new Map();
+
+  // Create and initailize the current node variable
+  let current = head;
+
+  // Iterate through the input linked list using a while loop to copy the linked list
+  while (current) {
+    // Create a new copied node and set it as the value for the current node in the map
+    const newNode = new Node(current.val);
+    map.set(current, newNode);
+    current = current.next;
+  }
+
+  // Reset the current node to the head node
+  current = head;
+
+  // Iterate through the input linked list using a while loop to assign the next and random pointers
+  while (current) {
+    // Get the copied node corresponding to the current node
+    const copyNode = map.get(current);
+
+    // If the current node has a next node, set the next pointer of the copied node
+    if (current.next) {
+      copyNode.next = map.get(current.next);
+    }
+
+    // If the current node has a random pointer, set the random pointer of the copied node
+    if (current.random) {
+      copyNode.random = map.get(current.random);
+    }
+
+    current = current.next;
+  }
+
+  // Return the head of the copied list
+  return map.get(head);
 };
+
+// The time complexity of this solution is O(n) where n is the number of nodes in the linked list.
+// This is because we iterate through the linked list twice:
+// once to create new nodes and store them in a map, and once to update the next and random pointers of the new nodes.
+// The space complexity is also O(n) because we are using a map to store the mapping between original nodes and their corresponding new nodes.
+// This map will have at most n entries, where n is the number of nodes in the linked list.
