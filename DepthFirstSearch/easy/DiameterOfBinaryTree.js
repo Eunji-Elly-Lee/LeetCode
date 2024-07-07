@@ -18,6 +18,37 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var diameterOfBinaryTree = function(root) {
-    
+var diameterOfBinaryTree = function (root) {
+  // Create and initialize the diameter to 0
+  let diameter = 0;
+
+  // Define a function to calculate the depth of the tree
+  const depth = (node) => {
+    // If the current node is null, return 0
+    if (node === null) {
+      return 0;
+    }
+
+    // Recursively find the depth of the left and right subtrees
+    const leftDepth = depth(node.left);
+    const rightDepth = depth(node.right);
+
+    // Update the diameter by comparing the current diameter with the path through the current node
+    diameter = Math.max(diameter, leftDepth + rightDepth);
+
+    // Return the maximum depth, which is the greater of the left and right subtree depths, plus 1 for the current node
+    return Math.max(leftDepth, rightDepth) + 1;
+  };
+
+  // Traverse the tree starting from the root node
+  depth(root);
+
+  // Return the calculated diameter
+  return diameter;
 };
+
+// The time complexity of this algorithm is O(n), where n is the number of nodes in the binary tree.
+// This is because we are visiting each node of the tree once in order to calculate the depth of each subtree.
+// The space complexity of this algorithm is O(n), where n is the number of nodes in the binary tree.
+// This is because the depth function recursively calls itself for each node in the tree,
+// leading to a recursive stack that can grow as large as the height of the tree.
