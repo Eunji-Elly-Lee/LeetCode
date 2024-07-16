@@ -17,6 +17,22 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-var isSameTree = function(p, q) {
-    
+var isSameTree = function (p, q) {
+  // If both input nodes are null, return true because it means we reached the end of both trees
+  if (p === null && q === null) {
+    return true;
+  }
+
+  // If one of the input nodes is null or their values are not the same, return false because the trees are not the same
+  if (p === null || q === null || p.val !== q.val) {
+    return false;
+  }
+
+  // Recursively check if the left and right subtrees are the same
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
+
+// The time complexity of this algorithm is O(n), where n is the number of nodes in the tree.
+// This is because we are recursively traversing each node in both trees to compare their values.
+// The space complexity is also O(n) in the worst case scenario,
+// as the recursive calls will consume space on the call stack proportional to the height of the tree.
